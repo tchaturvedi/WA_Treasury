@@ -15,6 +15,7 @@ class App():
 
         self.app.add_url_rule('/', 'index', self.index)
         self.app.add_url_rule('/<path:pagename>', 'page', self.page)
+        self.app.add_url_rule('/createPieChart', 'createPieChart', self.createPieChart, methods=["POST"])
 
         # generate the Table of content and page slugs from the title
         # exclude the index page as its can be accessed by clicking on the page logo
@@ -91,3 +92,47 @@ class App():
             chartInfo["data"] = data
             chartInfo["json"] = json.dumps(data)
         return chartInfo
+
+    def createPieChart(self):
+        sentInData = request.get_json(force=True)
+        chart = None
+        for key in sentInData.keys():
+            chart = key
+
+        if chart == "chart1":
+            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart1Info()))
+        elif chart == "chart2":
+            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart2Info()))
+        elif chart == "chart3":
+            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart3Info()))
+        elif chart == "chart4":
+            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart4Info()))
+
+    def getPieChartInfo(self, year, chartInfo):
+        oldData = chartInfo["data"]
+        newData = []
+        dic = {
+            "type": "pie",
+            "showInLegend": True,
+            "toolTipContent": "{y} - #percent %",
+            "yValueFormatString": "#0.#,,. Million",
+            "legendText": "{indexLabel}",
+        }
+        dataPoints = {}
+        for item in oldData:
+            for dataItem in item["dataPoints"]:
+                if dataItem["label"] == year:
+                    if item["name"] not in dataPoints.keys():
+                        dataPoints[item["name"]] = {"y": dataItem["y"], "indexLabel": item["name"]}
+                    else:
+                        dataPoints[item["name"]]["y"] += dataItem["y"]
+
+        for item in dataPoints:
+            newData.append(dataPoints[item])
+
+        dic["dataPoints"] = newData
+        pieChartInfo = {}
+        pieChartInfo["title"] = "Detailed Data " + str(year)
+        pieChartInfo["data"] = dic
+        pieChartInfo["json"] = json.dumps(dic)
+        return pieChartInfo
