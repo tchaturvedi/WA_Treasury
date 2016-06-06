@@ -1,17 +1,16 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="article" style="padding-top: 20px">
-    </div>
-    {{ page.html | safe}}
+<div class="article" style="padding-top: 20px">
+</div>
+{{ page.html | safe}}
+<script type="text/javascript">
+    var data = [];
+    data = {{ chart1Info.json|safe }};
+    options = new Object()
+    options['title'] = "{{chart1Info.chartTitle}}"
+    options['theme'] = 'theme1'
 
-    <script type="text/javascript">
-        var data = [];
-        data = {{ chart1Info.json|safe }};
-        options = new Object()
-        options['title'] = "{{chart1Info.chartTitle}}"
-        options['theme'] = 'theme1'
-
-        createBarChart(data, options)
-    </script>
+    createBarChart(data, options)
+</script>
 {% endblock %}

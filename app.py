@@ -1,10 +1,15 @@
+import json
 from datetime import datetime
+
 from flask import Flask, render_template, redirect, request, jsonify
-import json, os
 from flask_flatpages import FlatPages
 from openpyxl import load_workbook
-import conf
 from slugify import slugify
+
+from charts.piechartlib import CreatePieChart
+
+import conf
+
 
 class App():
 
@@ -26,7 +31,6 @@ class App():
         return redirect('index')
 
     def page(self, pagename):
-
         chart1Info = self.getChart1Info()
         for page in self.pages:
             if pagename == slugify(page['title']):
@@ -99,40 +103,5 @@ class App():
         for key in sentInData.keys():
             chart = key
 
-        if chart == "chart1":
-            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart1Info()))
-        elif chart == "chart2":
-            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart2Info()))
-        elif chart == "chart3":
-            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart3Info()))
-        elif chart == "chart4":
-            return jsonify(self.getPieChartInfo(sentInData[chart]["label"], self.getChart4Info()))
-
-    def getPieChartInfo(self, year, chartInfo):
-        oldData = chartInfo["data"]
-        newData = []
-        dic = {
-            "type": "pie",
-            "showInLegend": True,
-            "toolTipContent": "{y} - #percent %",
-            "yValueFormatString": "#0.#,,. Million",
-            "legendText": "{indexLabel}",
-        }
-        dataPoints = {}
-        for item in oldData:
-            for dataItem in item["dataPoints"]:
-                if dataItem["label"] == year:
-                    if item["name"] not in dataPoints.keys():
-                        dataPoints[item["name"]] = {"y": dataItem["y"], "indexLabel": item["name"]}
-                    else:
-                        dataPoints[item["name"]]["y"] += dataItem["y"]
-
-        for item in dataPoints:
-            newData.append(dataPoints[item])
-
-        dic["dataPoints"] = newData
-        pieChartInfo = {}
-        pieChartInfo["title"] = "Detailed Data " + str(year)
-        pieChartInfo["data"] = dic
-        pieChartInfo["json"] = json.dumps(dic)
-        return pieChartInfo
+        piechart = CreatePieChart(sentInData[chart]["label"], chart)
+        return jsonify(piechart.createPieChart())
