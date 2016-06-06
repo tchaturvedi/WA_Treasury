@@ -4,14 +4,16 @@
     <div class="article" style="padding-top: 20px">
     </div>
     {{ page.html | safe}}
+    {% if chartInfo %}
+        <script type="text/javascript">
+            var data = [];
+            data = {{ chartInfo.json|safe }};
+            options = new Object()
+            options['title'] = "{{chartInfo.chartTitle}}"
+            options['theme'] = 'theme1'
 
-    <script type="text/javascript">
-        var data = [];
-        data = {{ chart1Info.json|safe }};
-        options = new Object()
-        options['title'] = "{{chart1Info.chartTitle}}"
-        options['theme'] = 'theme1'
+            createBarChart(data, options)
+        </script>
+    {% endif %}
 
-        createBarChart(data, options)
-    </script>
 {% endblock %}
