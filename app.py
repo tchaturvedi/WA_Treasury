@@ -6,6 +6,7 @@ from flask_flatpages import FlatPages
 from openpyxl import load_workbook
 from slugify import slugify
 from util import buildChartInfo
+from charts.piechartlib import CreatePieChart
 
 ######################
 # Configurations
@@ -50,15 +51,8 @@ def createPieChart():
     for key in sentInData.keys():
         chart = key
 
-    if chart == "chart1":
-        return jsonify(getPieChartInfo(sentInData[chart]["label"], getChart1Info()))
-    # elif chart == "chart2":
-    #     return jsonify(getPieChartInfo(sentInData[chart]["label"], getChart2Info()))
-    # elif chart == "chart3":
-    #     return jsonify(getPieChartInfo(sentInData[chart]["label"], getChart3Info()))
-    # elif chart == "chart4":
-    #     return jsonify(getPieChartInfo(sentInData[chart]["label"], getChart4Info()))
-
+    createPie = CreatePieChart(sentInData[chart]["label"], chart)
+    return jsonify(createPie.createPieChart())
 
 #####################
 # Helper Functions
@@ -123,37 +117,6 @@ def getChart1Info():
         chartInfo["data"] = data
         chartInfo["json"] = json.dumps(data)
     return chartInfo
-
-
-def getPieChartInfo(year, chartInfo):
-    oldData = chartInfo["data"]
-    newData = []
-    dic = {
-        "type": "pie",
-        "showInLegend": True,
-        "toolTipContent": "{y} - #percent %",
-        "yValueFormatString": "#0.#,,. Million",
-        "legendText": "{indexLabel}",
-    }
-    dataPoints = {}
-    for item in oldData:
-        for dataItem in item["dataPoints"]:
-            if dataItem["label"] == year:
-                if item["name"] not in dataPoints.keys():
-                    dataPoints[item["name"]] = {"y": dataItem["y"], "indexLabel": item["name"]}
-                else:
-                    dataPoints[item["name"]]["y"] += dataItem["y"]
-
-    for item in dataPoints:
-        newData.append(dataPoints[item])
-
-    dic["dataPoints"] = newData
-    pieChartInfo = {}
-    pieChartInfo["title"] = "Detailed Data " + str(year)
-    pieChartInfo["data"] = dic
-    pieChartInfo["json"] = json.dumps(dic)
-    return pieChartInfo
-
 
 if __name__ == '__main__':
     app.run(debug=conf.DEBUG)

@@ -21,7 +21,7 @@ class CreatePieChart():
         # An array of dictionary with Name of the category and index in excel file
         yaxis = chartconfig['y-axis']
 
-        charttile = chartconfig['chart-title']
+        charttitle = chartconfig['chart-title']
         datatitle = chartconfig['data-title']
         rowoffset = chartconfig['row-offset']
         wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
@@ -50,7 +50,7 @@ class CreatePieChart():
 
         dic['dataPoints'] = newData
         pieChartInfo = {}
-        pieChartInfo['title'] = charttile + str(self.year)
+        pieChartInfo['title'] = charttitle + str(self.year)
         pieChartInfo['data'] = dic
         pieChartInfo['json'] = json.dumps(dic)
         return pieChartInfo

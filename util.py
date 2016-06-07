@@ -23,7 +23,6 @@ def chart_renderer(text):
     matchedObject = re.finditer(CUSTOM_CHART_RE, text)
     if matchedObject is not None:
         for mo in matchedObject:
-            print(mo.group('name'))
             chart_html = makeHtml(CHART_CONTAINER_TMPL, mo)
             text = re.sub(CUSTOM_CHART_RE, chart_html, text)
         return pygmented_markdown(text)
