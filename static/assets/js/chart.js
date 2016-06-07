@@ -18,7 +18,8 @@ function showPieChart(e){
     if ($('#parentPieChartContainer').length == 0){
         var button = $('<button/>',{
             type: 'button',
-            class: 'btn btn-default glyphicon glyphicon-remove',
+            text: 'x',
+            class: 'button',
             click: function () {
                 $("#parentPieChartContainer").remove()
             }
@@ -31,8 +32,8 @@ function showPieChart(e){
             id: 'pieChartContainer'
         })
         $('#parentChartContainer').append(parentPieChartContainer)
-        $('#parentPieChartContainer').append(pieChartContainer)
         $('#parentPieChartContainer').append(button)
+        $('#parentPieChartContainer').append(pieChartContainer)
     }
 
     $.ajax({
