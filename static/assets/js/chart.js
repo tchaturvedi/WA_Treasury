@@ -3,7 +3,7 @@ function createBarChart(data, options) {
             data[i]["click"] = showPieChart;
         }
 
-    var chart = new CanvasJS.Chart("chart1", {
+    var chart = new CanvasJS.Chart(options.id, {
         theme: options.theme,
         title:{
             text: options.title

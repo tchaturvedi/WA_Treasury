@@ -1,11 +1,11 @@
 import json
 from openpyxl import load_workbook
 
-def createBarChart():
-    with open("charts/barchartconfig.json") as config:
+def createBarChart(charttype):
+    with open("charts/chartconfig.json") as config:
         jsonData = json.load(config)
 
-    chart = jsonData['chart1']
+    chart = jsonData[charttype]
     chartTitle = chart['chart-title']
     dataTitle = chart['data-title']
     rowOffset = chart['row-offset']
@@ -13,50 +13,28 @@ def createBarChart():
     wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
     sheet = wb[dataTitle]
 
-    items = ["VP GO", "MVFT GO", "Triple Pledge", "GARVEEs", "TIFIA", "State COPs"]
+    xaxis = chart['x-axis']
+    items = chart['y-axis']
     data = []
 
     for item in items:
+        key = None
+        for k in item.keys():
+            key = k
         dict = {
             "type": "stackedColumn",
-            "name": item,
+            "name": key,
             "cursor": "pointer",
             "showInLegend": True
         }
 
         dataPoints = []
         for row in sheet.iter_rows(row_offset=int(rowOffset)):
-            if item == "VP GO":
-                d = {
-                    "label": row[0].value,
-                    "y": row[1].value
-                }
-            elif item == "MVFT GO":
-                d = {
-                    "label": row[0].value,
-                    "y": row[2].value
-                }
-            elif item == "Triple Pledge":
-                d = {
-                    "label": row[0].value,
-                    "y": row[3].value
-                }
-            elif item == "GARVEEs":
-                d = {
-                    "label": row[0].value,
-                    "y": row[4].value
-                }
-            elif item == "TIFIA":
-                d = {
-                    "label": row[0].value,
-                    "y": row[5].value
-                }
-            else:
-                d = {
-                    "label": row[0].value,
-                    "y": row[5].value
-                }
-            if d["label"] != None:
+            d = {
+                "label": row[xaxis].value,
+                "y": row[item[key]].value
+            }
+            if d['label'] is not None:
                 dataPoints.append(d)
 
         dict["dataPoints"] = dataPoints

@@ -6,13 +6,15 @@
     {{ page.html | safe}}
     {% if chartInfo %}
         <script type="text/javascript">
-            var data = [];
-            data = {{ chartInfo.json|safe }};
-            options = new Object()
-            options['title'] = "{{chartInfo.chartTitle}}"
-            options['theme'] = 'theme1'
-
-            createBarChart(data, options)
+            {% for key, value in chartInfo.items() %}
+                var data = []
+                data = {{ value.json | safe }}
+                options = new Object()
+                options['title'] = "{{ value.chartTitle }}"
+                options['theme'] = 'theme1'
+                options['id'] = "{{ key }}"
+                createBarChart(data, options)
+            {% endfor %}
         </script>
     {% endif %}
 

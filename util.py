@@ -64,5 +64,7 @@ def parseConfig(configStr):
 def buildChartInfo(html_text):
     dom = htmldom.HtmlDom().createDom(html_text)
     charts = dom.find("div[class=chartContainer]")
-    # for chart in charts:
-    #     print(chart.attr('id'))
+    chartsid = []
+    for chart in charts:
+        chartsid.append(chart.attr('id'))
+    return chartsid

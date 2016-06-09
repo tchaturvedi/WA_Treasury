@@ -1,0 +1,28 @@
+{
+  "chart1": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Outstanding Bonds and COPs FY 2000-2016",
+    "data-title": "Outstanding (Fig 2)",
+    "x-axis": 0,
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+    "row-offset": 3
+  },
+
+  "chart2": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Bond and COP Issuance FY 2000-2016",
+    "data-title": "New Money Issuance (Fig 3)",
+    "x-axis": 0,
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+    "row-offset": 3
+  },
+  "chart3": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Debt Service Paid FY 2000-2016",
+    "data-title": "Outstanding (Fig 2)",
+    "x-axis": 0,
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+    "row-offset": 3
+  }
+
+}

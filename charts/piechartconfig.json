@@ -1,5 +1,6 @@
 {
 "chart1": {
+            "chart-type": "pie",
             "chart-title": "Outstanding Bonds & COPS in Year ",
             "data-title": "Outstanding (Fig 2)",
             "x-axis": 0,

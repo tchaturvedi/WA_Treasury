@@ -40,9 +40,11 @@ def page(path):
         Entry point for each page based on the page slug
     '''
     page = pages.get_or_404(path)
-    buildChartInfo(page.html)
-    chartInfo = createBarChart()
-    return render_template('page.html', page=page, toc=TOC, year=datetime.now().year, chartInfo=chartInfo)
+    charts = buildChartInfo(page.html)
+    chartdic = {}
+    for chart in charts:
+        chartdic[chart] = createBarChart(chart)
+    return render_template('page.html', page=page, toc=TOC, year=datetime.now().year, chartInfo=chartdic)
 
 
 @app.route('/createPieChart', methods=['POST'])
