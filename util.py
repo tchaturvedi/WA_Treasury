@@ -6,13 +6,13 @@ from flask_flatpages.utils import pygmented_markdown
 
 CUSTOM_CHART_RE = r'[--]{2}(?P<name>.+)[:](?P<footnote>.+)[|](?P<config>.+)[--]{2}'
 CHART_DEFAULT_STYLE = '{"height":"300px", "width":"100%", "margin-bottom":"10px"}'
-CHART_CONTAINER_TMPL = "<div id='parentChartContainer'>" \
+CHART_CONTAINER_TMPL =  "<div id='parentChartContainer'>"\
                         "<div id='chartId' style='chartStyle' class='chartContainer'>" \
                         "</div>" \
                         "<div id='chartFootnote'>" \
                             "footnoteText" \
                         "</div>" \
-                       "</div>"
+                        "</div>"
 
 
 def chart_renderer(text):
@@ -24,7 +24,7 @@ def chart_renderer(text):
     if matchedObject is not None:
         for mo in matchedObject:
             chart_html = makeHtml(CHART_CONTAINER_TMPL, mo)
-            text = re.sub(CUSTOM_CHART_RE, chart_html, text)
+            text = re.sub(CUSTOM_CHART_RE, chart_html, text, 1)
         return pygmented_markdown(text)
     return pygmented_markdown(text)
 
@@ -47,7 +47,6 @@ def makeHtml(tmpl, matchedObject):
     html = re.sub(r'chartId', name, tmpl)
     html = re.sub(r'chartStyle', getChartStyle(config), html)
     html = re.sub(r'footnoteText', footnote, html)
-
     return html
 
 def getChartStyle(config):

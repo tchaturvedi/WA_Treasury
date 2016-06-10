@@ -8,7 +8,7 @@ class CreatePieChart():
         self.chartType = chartType
 
     def createPieChart(self):
-        with open("charts/piechartconfig.json") as config:
+        with open("charts/chartconfig.json") as config:
             data = json.load(config)
 
         chartconfig = {}

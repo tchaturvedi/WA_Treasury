@@ -1,13 +1,12 @@
-import json
 from datetime import datetime
 
 from flask import Flask, render_template, redirect, request, jsonify
 from flask_flatpages import FlatPages
-from openpyxl import load_workbook
 from slugify import slugify
 from util import buildChartInfo
 from charts.piechartlib import CreatePieChart
 from charts.barchartlib import createBarChart
+import re
 
 ######################
 # Configurations
@@ -39,6 +38,7 @@ def page(path):
     '''
         Entry point for each page based on the page slug
     '''
+
     page = pages.get_or_404(path)
     charts = buildChartInfo(page.html)
     chartdic = {}
@@ -53,7 +53,6 @@ def createPieChart():
     chart = None
     for key in sentInData.keys():
         chart = key
-
     createPie = CreatePieChart(sentInData[chart]["label"], chart)
     return jsonify(createPie.createPieChart())
 

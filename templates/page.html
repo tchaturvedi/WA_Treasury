@@ -8,12 +8,13 @@
         <script type="text/javascript">
             {% for key, value in chartInfo.items() %}
                 var data = []
-                data = {{ value.json | safe }}
+                data = {{ value.json | safe }};
                 options = new Object()
-                options['title'] = "{{ value.chartTitle }}"
-                options['theme'] = 'theme1'
-                options['id'] = "{{ key }}"
-                createBarChart(data, options)
+                options['title'] = "{{ value.chartTitle }}";
+                options['theme'] = 'theme1';
+                options['id'] = "{{ key }}";
+                var chartClass = new createChart(data, options);
+                chartClass.createBarChart();
             {% endfor %}
         </script>
     {% endif %}

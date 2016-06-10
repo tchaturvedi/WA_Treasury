@@ -8,11 +8,11 @@ At the end of 2015, Washington's debt portfolio stood at $20.6 billion, an incre
 
 ## Figure 1 need to be rendered
 
---chart1:[1] FY 2016 estimate.|{}--
+--chart1-bar:[1] FY 2016 estimate.|{}--
 
---chart2:[1] New money only. One half of MVFT GO bonds issued as Build America Bonds in FY 2010 are shown in FY 2011. No MVFT GO bonds were issued in FY 2011.|{}--
+--chart2-bar:[1] New money only. One half of MVFT GO bonds issued as Build America Bonds in FY 2010 are shown in FY 2011. No MVFT GO bonds were issued in FY 2011.|{}--
 
---chart3:[1] FY 2016 estimate.|{}--
+--chart3-bar:[1] FY 2016 estimate.|{}--
 
 Following more than a decade of significant expansion, growth in the debt portfolio of the State of Washington is slowing to a more modest pace. New money issuance of bonds has declined somewhat from the peaks of 2010 and 2012 and a growing volume of bonds is maturing annually. 
 
