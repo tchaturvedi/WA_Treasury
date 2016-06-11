@@ -28,7 +28,7 @@ function createChart(data, options){
                     $('#parentPieChartContainer').append(pieChartContainer);
                 }
 
-                sendInData = new Object();
+                sendInData = {};
                 sendInData[pieId] = e.dataPoint;
                 $.ajax({
                     type: "POST",

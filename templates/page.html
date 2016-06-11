@@ -7,9 +7,13 @@
     {% if chartInfo %}
         <script type="text/javascript">
             {% for key, value in chartInfo.items() %}
-                var data = []
-                data = {{ value.json | safe }};
-                options = new Object()
+                var data = [];
+            data = {
+            {
+                value.json | safe
+            };
+            }
+            options = {};
                 options['title'] = "{{ value.chartTitle }}";
                 options['theme'] = 'theme1';
                 options['id'] = "{{ key }}";
