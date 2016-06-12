@@ -5,6 +5,7 @@ def createBarChart(charttype):
     with open("charts/chartconfig.json") as config:
         jsonData = json.load(config)
 
+    config.close()
     chart = jsonData[charttype]
     chartTitle = chart['chart-title']
     dataTitle = chart['data-title']
@@ -30,10 +31,17 @@ def createBarChart(charttype):
 
         dataPoints = []
         for row in sheet.iter_rows(row_offset=int(rowOffset)):
-            d = {
-                "label": row[xaxis].value,
-                "y": row[item[key]].value
-            }
+            if type(item[key]) is list:
+                if row[item[key][1]] == key:
+                    d = {
+                        "label": row[xaxis].value,
+                        "y": row[item[key][0]].value
+                    }
+            else:
+                d = {
+                    "label": row[xaxis].value,
+                    "y": row[item[key]].value
+                }
             if d['label'] is not None:
                 dataPoints.append(d)
 

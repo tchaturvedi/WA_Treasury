@@ -1,26 +1,22 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <div class="article" style="padding-top: 20px">
-    </div>
-    {{ page.html | safe}}
-    {% if chartInfo %}
-        <script type="text/javascript">
-            {% for key, value in chartInfo.items() %}
-                var data = [];
-            data = {
-            {
-                value.json | safe
-            };
-            }
-            options = {};
-                options['title'] = "{{ value.chartTitle }}";
-                options['theme'] = 'theme1';
-                options['id'] = "{{ key }}";
-                var chartClass = new createChart(data, options);
-                chartClass.createBarChart();
-            {% endfor %}
-        </script>
-    {% endif %}
+<div class="article" style="padding-top: 20px">
+</div>
+{{ page.html | safe}}
+{% if chartInfo %}
+<script type="text/javascript">
+    {% for key, value in chartInfo.items() %}
+    var data = [];
+    data = {{ value.json | safe }};
+    options = {};
+    options['title'] = "{{ value.chartTitle }}";
+    options['theme'] = 'theme1';
+    options['id'] = "{{ key }}";
+    var chartClass = new createChart(data, options);
+    chartClass.createBarChart();
+    {% endfor %}
+</script>
+{% endif %}
 
 {% endblock %}

@@ -293,15 +293,23 @@ ol {
   list-style: decimal inside; }
 ol, ul {
   padding-left: 0;
-  margin-top: 0; }
+  margin-top: 0;
+}
 ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
-li {
-  margin-bottom: 1rem; }
+  margin: 0.5rem 0 0.5rem 3rem;
+  font-size: 90%;
+}
+li{
+  line-height: 0;
+}
+li a{
+  margin: 1px;
+  border: 1px black solid;
+  background-color: #00b3ee;
+}
 
 
 /* Code

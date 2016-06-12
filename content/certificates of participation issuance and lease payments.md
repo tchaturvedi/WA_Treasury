@@ -1,0 +1,11 @@
+order: 7
+
+# CERTIFICATES OF PARTICIPATION: ISSUANCE AND LEASE PAYMENTS
+
+The State often acquires real estate and equipment by issuing certificates of participation (COPs) which finance new construction, facility improvements, the acquisition of land or buildings, or personal property such as vehicles, computer hardware and office equipment.  In this type of financing, the State leases property to a designated non-profit organization (without transferring ownership) and then makes periodic payments to lease the property back over the life of the financing.  The term of each lease is set in relation to the useful life of the asset being financed. COPs are generally issued with 20-year maturities for real estate projects and 3 to 10-years for equipment. Multiple financings are often pooled together to achieve economies of scale in borrowing and issuance costs.  Approximately half of outstanding COPs will be paid off in about 5 years.
+
+COPs are not backed by the full faith and credit of the State. Instead, each agency pledges its appropriation. Accordingly, COPs typically are rated one notch below general obligation debt and borrowing rates are somewhat higher.  In practice, most state agencies, particularly community and technical colleges, rely on revenue sources such as student fees that are not considered general state revenues to make lease payments. Local governments can participate in the State’s COP program if their borrowings are supported by a local government general obligation pledge and meet the credit criteria of the Office of the State Treasurer.
+
+State real estate acquisitions financed with COPs must be authorized by the Legislature.  The Office of the State Treasurer requires prior legislative approval for major equipment acquisitions. On average, annual COP issuance has increased since 2001. Approximately $107 million real estate COPs were authorized by the Legislature in the 2015-17 Capital Budget and $100 million state equipment COPs are expected to be issued in the same period.
+
+## figure 13 needs more information to be rendered

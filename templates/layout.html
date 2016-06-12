@@ -27,18 +27,14 @@
 <body>
     <div class="u-full-width navbar">
         <h3 >
-            <img id="logo" src="static/image/Black & White Seal.jpg" alt="Treasury Logo" style="padding-top:5px;heigh: 80px; width: 50px">
+            <img id="logo" src="../static/assets/image/Black & White Seal.jpg" alt="Treasury Logo" style="padding-top:5px;heigh: 80px; width: 50px">
             <a class="title" href="/" style="float:right">2016 Debt Affordability Study</a>
         </h3>
     </div>
     <div class="u-full-width content">
       <div class="row">
-        <div class="three columns" id="sidebar">
-            <ul>
-              {% for title, slug in toc %}
-                <li><a class="navbar-link" href="{{slug}}">{{title}}</a></li>
-              {% endfor %}
-            </ul>
+        <div class="three columns" id="sidebar" style="height:auto;">
+            {{ toc | safe }}
         </div>
         <div class="one column">
             <a href="#" data-toggle="sidebar" id="sidebar-toggle">

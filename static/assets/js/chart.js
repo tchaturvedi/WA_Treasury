@@ -26,8 +26,27 @@ function createChart(data, options){
                     $(parentPieChartContainer).insertAfter($('#' + self.options.id));
                     $('#parentPieChartContainer').append(button);
                     $('#parentPieChartContainer').append(pieChartContainer);
+                }else if($('#parentPieChartContainer').prev().attr('id') != self.options.id){
+                    $("#parentPieChartContainer").remove()
+                                        var button = $('<button/>',{
+                        type: 'button',
+                        text: 'x',
+                        class: 'button-primary',
+                        click: function () {
+                            $("#parentPieChartContainer").remove()
+                        }
+                    });
+                    var parentPieChartContainer = $('<div/>', {
+                        id: 'parentPieChartContainer',
+                        style:"padding-top: 20px; margin-bottom: 40px; height: 450px"
+                    });
+                    var pieChartContainer = $('<div/>', {
+                        id: pieId
+                    });
+                    $(parentPieChartContainer).insertAfter($('#' + self.options.id));
+                    $('#parentPieChartContainer').append(button);
+                    $('#parentPieChartContainer').append(pieChartContainer);
                 }
-
                 sendInData = {};
                 sendInData[pieId] = e.dataPoint;
                 $.ajax({

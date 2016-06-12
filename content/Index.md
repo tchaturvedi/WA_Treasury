@@ -1,4 +1,4 @@
-title: index
+order: 0
 
 The State borrows to undertake capital projects such as building construction, land acquisition, and transportation projects. With each borrowing, the State makes a commitment to repay the debt with regular and approximately equal payments of principal and interest over the term of the borrowing. The term of the borrowing is always within the expected useful life of the assets being financed. 
 

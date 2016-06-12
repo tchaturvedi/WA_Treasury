@@ -1,2 +1,0 @@
-def getLineChart():
-    pass
