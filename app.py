@@ -99,7 +99,7 @@ for resources in TOC.values():
         if type(resource) is str:
             if resource != "index":
                 TOCString += "<li><a class='navbar-link' href='/%s'>%s</a></li>" % (slugify(resource), resource)
-        else:
+        else:git
             for key in resource.keys():
                 TOCString += concatTOC(resource, resource.values(), key, "/"+key)
 TOCString += "</ul>"
