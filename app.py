@@ -119,7 +119,6 @@ def page(path):
         Entry point for each page based on the page slug
     '''
     path = str(path).replace("-", " ").lower()
-    print(path)
     page = pages.get_or_404(path)
     charts = buildChartInfo(page.html)
     chartdic = {}
