@@ -24,6 +24,8 @@ class CreatePieChart():
         charttitle = chartconfig['chart-title']
         datatitle = chartconfig['data-title']
         rowoffset = chartconfig['row-offset']
+        colors = chartconfig['color']
+        colorIndex = 0
         wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
         sheet = wb[datatitle]
         newData = []
@@ -41,9 +43,11 @@ class CreatePieChart():
                     for key in cat.keys():
                         if row[cat[key]].value is not None and row[cat[key]].value > 0:
                             if key not in dataPoints.keys():
-                                dataPoints[key] = {'y': row[cat[key]].value, 'indexLabel': key}
+                                dataPoints[key] = {'y': row[cat[key]].value, 'indexLabel': key,
+                                                   'legendMarkerColor': colors[colorIndex], 'color': colors[colorIndex]}
                             else:
                                 dataPoints[key]['y'] += row[cat[key]].value
+                    colorIndex += 1
 
         for item in dataPoints:
             newData.append(dataPoints[item])

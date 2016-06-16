@@ -10,21 +10,61 @@
     <meta name="author" content="">
 
     <title>Data Visualization Project</title>
-    <link href="../static/assets/css/normalize.css" rel="stylesheet" />
-    <link href="../static/assets/css/skeleton.css" rel="stylesheet" />
-    <link href="../static/assets/css/custom-style.css" rel="stylesheet" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+        {% block script %}
+    <!-- Canvas JS -->
+    <script src="../static/canvasjs-1.8.0/canvasjs.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/raphael/raphael-min.js"></script>
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/bower_components/morrisjs/morris.min.js"></script>
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/js/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../static/startbootstrap-sb-admin-2-1.0.8/dist/js/sb-admin-2.js"></script>
+
+    <!-- Own Custom JavaScript -->
+    <script src="../static/assets/js/chart.js"></script>
+    {% endblock %}
+
 </head>
 
-{% block scripts %}
-<!-- Canvas JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="../static/canvasjs-1.8.0/jquery.canvasjs.min.js"></script>
-<script src="../static/assets/js/application.js"></script>
-<script src="../static/assets/js/chart.js"></script>
-{% endblock %}
-
 <body>
+<<<<<<< HEAD
     <div class="u-full-width navbar">
         <h3 >
             <img id="logo" src="../static/assets/image/Black & White Seal.jpg" alt="Treasury Logo" style="padding-top:5px;heigh: 80px; width: 50px">
@@ -45,9 +85,46 @@
         </div>
         <div class="eight columns">
             {% block content %}{% endblock %}
+=======
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+            <img src="../static/assets/image/Black & White Seal.jpg" style="padding-top:5px;heigh:80px;width:50px;">
+            <a class="navbar-brand navbar-right" href="/">2016 Debt Affordability Study</a>
+            <!-- /.navbar-header -->
+
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    {{ toc | safe }}
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+>>>>>>> 70ba8893dc87520776bcd8a1a2fb67023fb5f53f
         </div>
-      </div>
+        <!-- /#page-wrapper -->
+
     </div>
+    <!-- /#wrapper -->
 
 </body>
 

@@ -75,9 +75,9 @@ def concatTOC(resources, sublevelValues, currentLevel, fullPath):
                 if sublevel in resources.keys():
                     newString += concatTOC(resources, resources[sublevel], sublevel, fullPath+"/"+sublevel)
                 else:
-                    newString += "<li><a class='navbar-link' href='/%s/%s'>%s</a></li>" % (slugify(fullPath), slugify(sublevel), sublevel)
+                    newString += "<li><a href='/%s/%s'>%s</a></li>" % (slugify(fullPath), slugify(sublevel), sublevel.upper())
         else:
-            newString += "<li><a class='navbar-link' href='/%s/%s'>%s</a></li>" % (slugify(fullPath), slugify(sublevels), sublevels)
+            newString += "<li><a href='/%s/%s'>%s</a></li>" % (slugify(fullPath), slugify(sublevels), sublevels.upper())
     newString += "</ul></li>"
     return newString
 
@@ -93,13 +93,13 @@ pages = FlatPages(app)
 # generate the Table of content and page slugs from the title
 # exclude the index page as its can be accessed by clicking on the page logo
 TOC = createTableContentDictionary()
-TOCString = "<ul>"
+TOCString = "<ul class='nav' id='side-menu'>"
 for resources in TOC.values():
     for resource in resources:
         if type(resource) is str:
             if resource != "index":
-                TOCString += "<li><a class='navbar-link' href='/%s'>%s</a></li>" % (slugify(resource), resource)
-        else:git
+                TOCString += "<li><a href='/%s'>%s</a></li>" % (slugify(resource), resource.upper())
+        else:
             for key in resource.keys():
                 TOCString += concatTOC(resource, resource.values(), key, "/"+key)
 TOCString += "</ul>"
