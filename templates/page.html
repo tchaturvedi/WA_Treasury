@@ -13,6 +13,7 @@
     options['title'] = "{{ value.chartTitle }}";
     options['theme'] = 'theme1';
     options['id'] = "{{ key }}";
+    options['colorSet'] = {{ value.colorSet | safe}};
     var chartClass = new createChart(data, options);
     chartClass.createBarChart();
     {% endfor %}

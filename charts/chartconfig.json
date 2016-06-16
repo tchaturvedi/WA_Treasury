@@ -5,7 +5,8 @@
     "data-title": "Outstanding (Fig 2)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 3
+    "row-offset": 3,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart2-bar": {
     "chart-type": "stackedColumn",
@@ -13,23 +14,26 @@
     "data-title": "New Money Issuance (Fig 3)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart3-bar": {
     "chart-type": "stackedColumn",
     "chart-title": "Debt Service Paid FY 2000-2016",
     "data-title": "Debt Service Paid (Fig 4,5)",
     "x-axis": 0,
-    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart4-bar": {
     "chart-type": "stackedColumn",
     "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal Year ",
     "data-title": "Debt Service Due (Fig 4,5)",
     "x-axis": 0,
-    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart5-bar": {
     "chart-type": "column",
@@ -37,7 +41,9 @@
     "data-title": "New Money Issuance (Fig 3)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}],
-    "row-offset": 2
+    "row-offset": 2,
+    "color": ["#4F81BD"]
+
   },
   "chart6-bar": {
     "chart-type": "column",
@@ -45,7 +51,8 @@
     "data-title": "Debt Serv % of Gen Fund (Fig10)",
     "x-axis": 0,
     "y-axis": [{"Debt Service": 1}],
-    "row-offset": 2
+    "row-offset": 2,
+    "color": ["#4F81BD"]
   },
   "chart1-pie": {
     "chart-type": "pie",
@@ -53,7 +60,8 @@
     "data-title": "Outstanding (Fig 2)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 3
+    "row-offset": 3,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart2-pie": {
     "chart-type": "pie",
@@ -61,23 +69,29 @@
     "data-title": "New Money Issuance (Fig 3)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
   },
   "chart3-pie": {
     "chart-type": "pie",
     "chart-title": "Debt Service Paid in Year ",
     "data-title": "Debt Service Paid (Fig 4,5)",
     "x-axis": 0,
-    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
   },
   "chart4-pie": {
     "chart-type": "pie",
     "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal year ",
     "data-title": "Debt Service Due (Fig 4,5)",
     "x-axis": 0,
-    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-    "row-offset": 2
+    "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "row-offset": 2,
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
   },
   "chart2-line": {
     "chart-type": "line",
@@ -85,6 +99,7 @@
     "data-title": "Debt Serv % of Gen Fund (Fig10)",
     "x-axis": 0,
     "y-axis": [{"Debt Service as % of GF-S Revenues": 5}],
-    "row-offset": 2
+    "row-offset": 2,
+    "color": ["#4F81BD"]
   }
 }

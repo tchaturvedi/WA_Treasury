@@ -74,6 +74,7 @@ function createChart(data, options){
 
         var chart = new CanvasJS.Chart(self.options.id, {
             theme: self.options.theme,
+            colorSet: self.options.colorSet,
             title:{
                 text: self.options.title
             },

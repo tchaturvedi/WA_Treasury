@@ -16,17 +16,22 @@ def createBarChart(charttype):
 
     xaxis = chart['x-axis']
     items = chart['y-axis']
+    colors = chart['color']
+    colorIndex = 0;
     data = []
 
     for item in items:
+        print(colors[colorIndex])
         key = None
         for k in item.keys():
             key = k
         dict = {
             "type": "stackedColumn",
-            "name": key,
+            "legendText": key,
             "cursor": "pointer",
-            "showInLegend": True
+            "showInLegend": True,
+            'legendMarkerColor': colors[colorIndex],
+            "toolTipContent": key + " in year " + "{label}: {y}"
         }
 
         dataPoints = []
@@ -35,15 +40,18 @@ def createBarChart(charttype):
                 if row[item[key][1]] == key:
                     d = {
                         "label": row[xaxis].value,
-                        "y": row[item[key][0]].value
+                        "y": row[item[key][0]].value,
+                        'color':colors[colorIndex]
                     }
             else:
                 d = {
                     "label": row[xaxis].value,
-                    "y": row[item[key]].value
+                    "y": row[item[key]].value,
+                    'color': colors[colorIndex]
                 }
             if d['label'] is not None:
                 dataPoints.append(d)
+        colorIndex += 1
 
         dict["dataPoints"] = dataPoints
         data.append(dict)
@@ -53,4 +61,6 @@ def createBarChart(charttype):
         chartInfo["chartTitle"] = chartTitle
         chartInfo["data"] = data
         chartInfo["json"] = json.dumps(data)
+        if 'color' in chart.keys():
+            chartInfo["colorSet"] = chart['color']
     return chartInfo

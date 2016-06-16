@@ -5,7 +5,6 @@ order: 6
 Motor Vehicle Fuel Tax General Obligation (MVFT GO) bonds are paid from state excise taxes on motor vehicle fuels and are backed by the full faith, credit and taxing power of the State.  Proceeds of MVFT GO bonds are constitutionally restricted to highway capital projects for public highways, county roads, bridges, city streets, and the ferry system. MVFT GO bonds carry the same ratings as VP GO bonds and borrowing rates are the same.
 
 ## figure 11 needs more information to be rendered
---chart7-bar:[1] Excludes refundings. FY 2016 estimate. One half of MVFT GO bonds issued as Build America Bonds in FY 2010 are shown in FY 2011. No MVFT GO bonds were issued in FY 2011. |{}--
 
 Over the past decade Washington has significantly increased its reliance on MVFT GO bonds to support legislative spending plans associated with gas tax hikes. Fully leveraging revenues from the gas tax increases of the 2003 Nickel Act and the 2005 Transportation Partnership Act increased the State’s annual MVFT GO issuance from $65 million in the 1990s to over $500 million by 2013. In 2015, the Legislature approved further increases in gas taxes in the Connecting Washington transportation package and directed these revenues to specific capital projects.
 
