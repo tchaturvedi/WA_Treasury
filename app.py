@@ -5,9 +5,8 @@ from flask import Flask, render_template, redirect, request, jsonify
 from flask_flatpages import FlatPages
 from slugify import slugify
 from util import buildChartInfo
-from charts.piechartlib import CreatePieChart
-from charts.barchartlib import createBarChart
-from charts.linechartlib import createLineChart
+from charts import piechartlib, barchartlib, linechartlib
+
 
 ######################
 # Configurations
@@ -124,9 +123,9 @@ def page(path):
     chartdic = {}
     for chart in charts:
         if 'bar' in chart:
-            chartdic[chart] = createBarChart(chart)
+            chartdic[chart] = barchartlib.createBarChart(chart)
         elif 'line' in chart:
-            chartdic[chart] = createLineChart(chart)
+            chartdic[chart] = linechartlib.createLineChart(chart)
     return render_template('page.html', page=page, toc=TOCString, year=datetime.now().year, chartInfo=chartdic)
 
 
@@ -136,7 +135,7 @@ def createPieChart():
     chart = None
     for key in sentInData.keys():
         chart = key
-    createPie = CreatePieChart(sentInData[chart]["label"], chart)
+    createPie = piechartlib.CreatePieChart(sentInData[chart]["label"], chart)
     return jsonify(createPie.createPieChart())
 
 if __name__ == '__main__':
