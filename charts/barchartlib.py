@@ -17,7 +17,7 @@ def createBarChart(charttype):
     xaxis = chart['x-axis']
     items = chart['y-axis']
     colors = chart['color']
-    colorIndex = 0;
+    colorIndex = 0
     data = []
 
     for item in items:
@@ -40,7 +40,7 @@ def createBarChart(charttype):
                     d = {
                         "label": row[xaxis].value,
                         "y": row[item[key][0]].value,
-                        'color':colors[colorIndex]
+                        'color': colors[colorIndex]
                     }
             else:
                 d = {
@@ -60,6 +60,4 @@ def createBarChart(charttype):
         chartInfo["chartTitle"] = chartTitle
         chartInfo["data"] = data
         chartInfo["json"] = json.dumps(data)
-        if 'color' in chart.keys():
-            chartInfo["colorSet"] = chart['color']
     return chartInfo

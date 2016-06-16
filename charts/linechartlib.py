@@ -9,6 +9,7 @@ def createLineChart(charttype):
     chartTitle = chart['chart-title']
     dataTitle = chart['data-title']
     rowOffset = chart['row-offset']
+    colors = chart['color']
 
     wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
     sheet = wb[dataTitle]
@@ -25,7 +26,8 @@ def createLineChart(charttype):
             "type": "line",
             "name": key,
             "cursor": "pointer",
-            "showInLegend": True
+            "showInLegend": True,
+            "color": colors[0]
         }
 
         dataPoints = []
