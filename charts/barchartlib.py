@@ -21,7 +21,6 @@ def createBarChart(charttype):
     data = []
 
     for item in items:
-        print(colors[colorIndex])
         key = None
         for k in item.keys():
             key = k
