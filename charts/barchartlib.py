@@ -10,6 +10,7 @@ def createBarChart(charttype):
     chartTitle = chart['chart-title']
     dataTitle = chart['data-title']
     rowOffset = chart['row-offset']
+    yFormat = chart['y-axis-format']
 
     wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
     sheet = wb[dataTitle]
@@ -25,9 +26,9 @@ def createBarChart(charttype):
         for k in item.keys():
             key = k
         dict = {
-            "type": "stackedColumn",
+            "type": chart["chart-type"],
             "legendText": key,
-            "cursor": "pointer",
+            "cursor": "pointer" if len(items) > 1 else "default",
             "showInLegend": True,
             'legendMarkerColor': colors[colorIndex],
             "toolTipContent": key + " in year " + "{label}: {y}"
@@ -60,4 +61,6 @@ def createBarChart(charttype):
         chartInfo["chartTitle"] = chartTitle
         chartInfo["data"] = data
         chartInfo["json"] = json.dumps(data)
+        chartInfo["valueFormat"] = yFormat
+        chartInfo['addClick'] = False if len(items) == 1 else True
     return chartInfo

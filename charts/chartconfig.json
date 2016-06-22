@@ -1,56 +1,62 @@
 {
   "chart1-bar": {
     "chart-type": "stackedColumn",
-    "chart-title": "Outstanding Bonds and COPs FY 2000-2016",
+    "chart-title": "Outstanding Bonds and COPs FY 2000-2016[1] ($ billions)",
     "data-title": "Outstanding (Fig 2)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+    "y-axis-format": "$#,,,.",
     "row-offset": 3,
     "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart2-bar": {
     "chart-type": "stackedColumn",
-    "chart-title": "Bond and COP Issuance FY 2000-2016",
+    "chart-title": "Bond and COP Issuance FY 2000-2016[1] ($ millions)",
     "data-title": "New Money Issuance (Fig 3)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+    "y-axis-format": "$#,,.",
     "row-offset": 2,
     "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart3-bar": {
     "chart-type": "stackedColumn",
-    "chart-title": "Debt Service Paid FY 2000-2016",
+    "chart-title": "Debt Service Paid FY 2000-2016[1] ($ millions)",
     "data-title": "Debt Service Paid (Fig 4,5)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "y-axis-format": "$#,,.",
     "row-offset": 2,
     "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart4-bar": {
     "chart-type": "stackedColumn",
-    "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal Year ",
+    "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal Year[1] ($ millions)",
     "data-title": "Debt Service Due (Fig 4,5)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 4}, {"GARVEEs": 5}, {"TIFIA": 3}, {"State COPs": 6}],
+    "y-axis-format": "$#,,.",
     "row-offset": 2,
     "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
   },
   "chart5-bar": {
     "chart-type": "column",
-    "chart-title": "Issuance of Various Purpose General Obligation Bonds FY 2000-2016",
+    "chart-title": "Issuance of Various Purpose General Obligation Bonds FY 2000-2016[1] ($ millions)",
     "data-title": "New Money Issuance (Fig 3)",
     "x-axis": 0,
     "y-axis": [{"VP GO": 1}],
+    "y-axis-format": "$#,,.",
     "row-offset": 2,
     "color": ["#4F81BD"]
 
   },
   "chart6-bar": {
     "chart-type": "column",
-    "chart-title": "VP GO Debt Service: FY 2000-2016",
+    "chart-title": "VP GO Debt Service: FY 2000-2016[1] ($ millions)",
     "data-title": "Debt Serv % of Gen Fund (Fig10)",
     "x-axis": 0,
     "y-axis": [{"Debt Service": 1}],
+    "y-axis-format": "$#,,.",
     "row-offset": 2,
     "color": ["#4F81BD"]
   },
@@ -99,6 +105,17 @@
     "data-title": "Debt Serv % of Gen Fund (Fig10)",
     "x-axis": 0,
     "y-axis": [{"Debt Service as % of GF-S Revenues": 5}],
+    "y-axis-format": "#%",
+    "row-offset": 2,
+    "color": ["#9BBB59"]
+  },
+  "chart1-line": {
+    "chart-type": "line",
+    "chart-title": "Borrowing Costs - Bond Buyer Index compared to WA GO",
+    "data-title": "Borrowing Cost (Fig. 7)",
+    "x-axis": 3,
+    "y-axis": [{"BBI": 4},{"WA GO": 5}],
+    "y-axis-format": "#%",
     "row-offset": 2,
     "color": ["#4F81BD"]
   }

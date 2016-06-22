@@ -13,6 +13,12 @@
     options['title'] = "{{ value.chartTitle }}";
     options['theme'] = 'theme1';
     options['id'] = "{{ key }}";
+    options['addClick'] = false;
+    options['valueFormat'] = "{{ value.valueFormat }}"
+        {% if value.addClick %}
+            options['addClick'] = true;
+        {% endif %}
+        $("")
     var chartClass = new createChart(data, options);
     chartClass.createBarChart();
     {% endfor %}

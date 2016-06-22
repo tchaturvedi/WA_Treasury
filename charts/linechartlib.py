@@ -10,6 +10,7 @@ def createLineChart(charttype):
     dataTitle = chart['data-title']
     rowOffset = chart['row-offset']
     colors = chart['color']
+    yFormat = chart['y-axis-format']
 
     wb = load_workbook(filename="static/Debt Affordability Study Data.xlsx", data_only=True)
     sheet = wb[dataTitle]
@@ -47,4 +48,5 @@ def createLineChart(charttype):
         chartInfo["chartTitle"] = chartTitle
         chartInfo["data"] = data
         chartInfo["json"] = json.dumps(data)
+        chartInfo["valueFormat"] = yFormat
     return chartInfo
