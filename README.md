@@ -30,8 +30,8 @@ When more types of charts are needed to be added, the library file of the new ch
 
 When adding a new chart, the config file should be modified. The template for adding a new chart is as follows.
 
-"chart1-bar" (chartNumber-chartType): { \s\s
-"chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line") \s\s
+"chart1-bar" (chartNumber-chartType): { &nbsp;&nbsp;&nbsp;
+"chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line") &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp; "chart-title": "chart title",  (chat title that will be displayed on the website)  \s\s
 &nbsp;&nbsp;&nbsp; "data-title": "tab name", (tab name where the data will be read from in excel)  \s\s
 &nbsp;&nbsp;&nbsp; "x-axis": 0, (where data will start reading on x-axis)  \s\s
