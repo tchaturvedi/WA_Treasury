@@ -30,17 +30,17 @@ When more types of charts are needed to be added, the library file of the new ch
 
 When adding a new chart, the config file should be modified. The template for adding a new chart is as follows.
 
-"chart1-bar" (chartNumber-chartType): {
-   "chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line")
-   "chart-title": "chart title",  (chat title that will be displayed on the website)
-   "data-title": "tab name", (tab name where the data will be read from in excel)
-   "x-axis": 0, (where data will start reading on x-axis)
-   "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
-              (a list of categories and their corresponding column positions in excel worksheet)
-   "y-axis-format": "$#,,,.", (the format y-axis will be displayed in)
-   "row-offset": 3, (row offset where the data will be started reading)
-   "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
-             (hex color codes of all the categories)
+"chart1-bar" (chartNumber-chartType): { \s\s
+"chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line") \s\s
+&nbsp;&nbsp;&nbsp; "chart-title": "chart title",  (chat title that will be displayed on the website)  \s\s
+&nbsp;&nbsp;&nbsp; "data-title": "tab name", (tab name where the data will be read from in excel)  \s\s
+&nbsp;&nbsp;&nbsp; "x-axis": 0, (where data will start reading on x-axis)  \s\s
+&nbsp;&nbsp;&nbsp; "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+              (a list of categories and their corresponding column positions in excel worksheet)  \s\s
+&nbsp;&nbsp;&nbsp; "y-axis-format": "$#,,,.", (the format y-axis will be displayed in)  \s\s
+&nbsp;&nbsp;&nbsp; "row-offset": 3, (row offset where the data will be started reading) \s\s
+&nbsp;&nbsp;&nbsp; "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+             (hex color codes of all the categories)  \s\s
 }
 
 
