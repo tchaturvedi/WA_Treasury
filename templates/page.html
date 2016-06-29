@@ -18,7 +18,7 @@
         {% if value.addClick %}
             options['addClick'] = true;
         {% endif %}
-        $("")
+        $("#chart")
     var chartClass = new createChart(data, options);
     chartClass.createBarChart();
     {% endfor %}
