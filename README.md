@@ -31,15 +31,15 @@ When more types of charts are needed to be added, the library file of the new ch
 When adding a new chart, the config file should be modified. The template for adding a new chart is as follows.
 
 "chart1-bar" (chartNumber-chartType): {
-    "chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line")
-    "chart-title": "chart title",  (chat title that will be displayed on the website)
-&nbsp;&nbsp;&nbsp; "data-title": "tab name", (tab name where the data will be read from in excel)
-&nbsp;&nbsp;&nbsp; "x-axis": 0, (where data will start reading on x-axis)
-&nbsp;&nbsp;&nbsp; "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+1. "chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line")
+2. "chart-title": "chart title",  (chat title that will be displayed on the website)
+3. "data-title": "tab name", (tab name where the data will be read from in excel)
+4. "x-axis": 0, (where data will start reading on x-axis)
+5. "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
               (a list of categories and their corresponding column positions in excel worksheet)
-&nbsp;&nbsp;&nbsp; "y-axis-format": "$#,,,.", (the format y-axis will be displayed in)
-&nbsp;&nbsp;&nbsp; "row-offset": 3, (row offset where the data will be started reading)
-&nbsp;&nbsp;&nbsp; "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+6. "y-axis-format": "$#,,,.", (the format y-axis will be displayed in)
+7. "row-offset": 3, (row offset where the data will be started reading)
+8. "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
              (hex color codes of all the categories)
 }
 
