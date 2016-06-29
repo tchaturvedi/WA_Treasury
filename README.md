@@ -33,13 +33,13 @@ When adding a new chart, the config file should be modified. The template for ad
 "chart1-bar" (chartNumber-chartType): {
 "chart-type": "stackedColumn", (options: "stackedColumn", "column", "pie", "line")
 "chart-title": "chart title",  (chat title that will be displayed on the website)
-&nbsp;&nbsp;&nbsp; "data-title": "tab name", (tab name where the data will be read from in excel)
-&nbsp;&nbsp;&nbsp; "x-axis": 0, (where data will start reading on x-axis)
-&nbsp;&nbsp;&nbsp; "y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
+"data-title": "tab name", (tab name where the data will be read from in excel)
+"x-axis": 0, (where data will start reading on x-axis)
+"y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}],
               (a list of categories and their corresponding column positions in excel worksheet)
-&nbsp;&nbsp;&nbsp; "y-axis-format": "$#,,,.", (the format y-axis will be displayed in)
-&nbsp;&nbsp;&nbsp; "row-offset": 3, (row offset where the data will be started reading)
-&nbsp;&nbsp;&nbsp; "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+"y-axis-format": "$#,,,.", (the format y-axis will be displayed in)
+"row-offset": 3, (row offset where the data will be started reading)
+"color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
              (hex color codes of all the categories)
 }
 
