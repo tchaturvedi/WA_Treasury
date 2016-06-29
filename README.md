@@ -24,29 +24,30 @@ The rest of these files are straight forward Markdown Language
 
 ## Chart Folder Description
 
-The chart folder contains four different files including the library files and line chart library, pie chart library and chart config file.
+The chart folder contains four different files including the library files and and chart config file.
 Those library files indicate the type of chart could be created. Now there are three different types of charts including bar chart, line chart and pie chart.
-When more types of charts are needed to be added, the library file of the new chart type should be added in the chart folder.
+When more types of charts are needed, the library file of the new chart type should be added in the chart folder.
 
 When adding a new chart, the config file should be modified. The template for adding a new chart is as follows.
 
-"chart1-bar" (chartNumber-chartType): {
-<br>&nbsp;&nbsp;&nbsp;"chart-type": "stackedColumn" [1],
-<br>&nbsp;&nbsp;&nbsp;"chart-title": "chart title" ,
-<br>&nbsp;&nbsp;&nbsp;"data-title": "tab name" [2],
-<br>&nbsp;&nbsp;&nbsp;"x-axis": 0 [3],
-<br>&nbsp;&nbsp;&nbsp;"y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}] [4],
-<br>&nbsp;&nbsp;&nbsp;"y-axis-format": "$#,,,." [5],
-<br>&nbsp;&nbsp;&nbsp;"row-offset": 3 [6],
-<br>&nbsp;&nbsp;&nbsp;"color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"] [7]
+"chart1-bar" [1]: {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"chart-type": "stackedColumn" [2],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"chart-title": "chart title" ,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"data-title": "tab name" [3],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"x-axis": 0 [4],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"y-axis": [{"VP GO": 1}, {"MVFT GO": 2}, {"Triple Pledge": 3}, {"GARVEEs": 4}, {"TIFIA": 5}, {"State COPs": 6}] [5],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"y-axis-format": "$#,,,." [6],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"row-offset": 3 [7],
+<br>&nbsp;&nbsp;&nbsp;&nbsp;"color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"] [8]
 <br>}
 
-[1] different chart type options: "stackedColumn", "column", "pie", "line"
-[2] tab name where the data will be read from in excel
-[3] where data will start reading on x-axis
-[4] a list of categories and their corresponding column positions in excel worksheet
-[5] the format y-axis will be displayed in
-[6] row offset where the data will be started reading
-[7] hex color codes of all the categories
+<br>[1] chart name tag corresponding to the ones in content file
+<br>[2] different chart type options: "stackedColumn", "column", "pie", "line"
+<br>[3] worksheet name where the data will be read from in excel
+<br>[4] the column number where the data will be read from (0 is corresponding to A and so on)
+<br>[5] a list of categories and their corresponding column numbers in excel worksheet (0 is corresponding to A and so on)
+<br>[6] the format y-axis will be displayed in (each comma indicate 1K)
+<br>[7] row offset where the data will be read
+<br>[8] hex color codes of all the categories
 
 
