@@ -18,7 +18,7 @@ For instance:
 All of these files and subdirectories name need to be lower case with **NO** special characters
 
 Inside each .md files you will see a key word *order* followed by a colon and a number starting from 0.
-This is how the program recognize where in the table of contents should should every page tab link appear.
+This is how the program recognize where every tab should appear in the table of contents.
 
 The rest of these files are straight forward Markdown Language
 
