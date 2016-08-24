@@ -1,0 +1,109 @@
+{
+  "chart1-bar": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Outstanding Bonds and COPs FY 2000-2016[1] ($ billions)",
+    "data-title": "bgbd-ewss",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft_go", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "y-axis-format": "$#,,,.",
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+  },
+  "chart2-bar": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Bond and COP Issuance FY 2000-2016[1] ($ millions)",
+    "data-title": "vpi2-zz6y",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft_go", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "y-axis-format": "$#,,.",
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+  },
+  "chart3-bar": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Debt Service Paid FY 2000-2016[1] ($ millions)",
+    "data-title": "m3th-e73f",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "y-axis-format": "$#,,.",
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+  },
+  "chart4-bar": {
+    "chart-type": "stackedColumn",
+    "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal Year[1] ($ millions)",
+    "data-title": "qjp3-a68a",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "y-axis-format": "$#,,.",
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+  },
+  "chart5-bar": {
+    "chart-type": "column",
+    "chart-title": "Issuance of Various Purpose General Obligation Bonds FY 2000-2016[1] ($ millions)",
+    "data-title": "vpi2-zz6y",
+    "x-axis": "fy",
+    "y-axis": ["vp_go"],
+    "y-axis-format": "$#,,.",
+    "color": ["#4F81BD"]
+  },
+  "chart6-bar": {
+    "chart-type": "column",
+    "chart-title": "VP GO Debt Service: FY 2000-2016[1] ($ millions)",
+    "data-title": "4fgd-hjys",
+    "x-axis": "fy",
+    "y-axis": ["debt_service_payments"],
+    "y-axis-format": "$#,,.",
+    "color": ["#4F81BD"]
+  },
+  "chart1-pie": {
+    "chart-type": "pie",
+    "chart-title": "Outstanding Bonds & COPS in Year ",
+    "data-title": "bgbd-ewss",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft_go", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+  },
+  "chart2-pie": {
+    "chart-type": "pie",
+    "chart-title": "Bond and COP Issuance in Year ",
+    "data-title": "vpi2-zz6y",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft_go", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
+  },
+  "chart3-pie": {
+    "chart-type": "pie",
+    "chart-title": "Debt Service Paid in Year ",
+    "data-title": "m3th-e73f",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
+  },
+  "chart4-pie": {
+    "chart-type": "pie",
+    "chart-title": "Debt Service Due on Bonds and State COPs by Fiscal year ",
+    "data-title": "qjp3-a68a",
+    "x-axis": "fy",
+    "y-axis": ["vp_go", "mvft", "triple_pledge", "garvees", "tifia", "state_cops"],
+    "color": ["#4F81BD", "#9BBB59", "#4BACC6", "#F79646", "#953735", "#8064A2"]
+
+  },
+  "chart2-line": {
+    "chart-type": "line",
+    "chart-title": "Totals as Percent of General Fund-State Revenues",
+    "data-title": "4fgd-hjys",
+    "x-axis": "fy",
+    "y-axis": ["debt_service_as_of_gf_s_revenues"],
+    "y-axis-format": "#%",
+    "color": ["#9BBB59"]
+  },
+  "chart1-line": {
+    "chart-type": "line",
+    "chart-title": "Borrowing Costs - Bond Buyer Index compared to WA GO",
+    "data-title": "aihj-mv5f",
+    "x-axis": "fy",
+    "y-axis": ["bbi","wa_go"],
+    "y-axis-format": "#%",
+    "color": ["#4F81BD"]
+  }
+}

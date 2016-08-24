@@ -5,7 +5,8 @@ from flask import Flask, render_template, redirect, request, jsonify
 from flask_flatpages import FlatPages
 from slugify import slugify
 from util import buildChartInfo
-from charts import piechartlib, barchartlib, linechartlib
+from database_charts import barchartlib, piechartlib, linechartlib
+#from charts import barchartlib, piechartlib, linechartlib
 
 
 ######################
